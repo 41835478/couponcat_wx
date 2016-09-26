@@ -1,0 +1,5 @@
+.item{
+  display: fles;
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #eee;
+}

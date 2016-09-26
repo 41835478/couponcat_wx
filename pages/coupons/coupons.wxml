@@ -1,11 +1,17 @@
 <!-- 优惠券列表 -->
-<scroll-view scroll-y="true">
-  <view wx:for="{{coupons}}">
-    <view wx:for="{{item.lists}}">
-      <image src="{{item.img}}"></image>
-      <text>{{item.name}}</text>
-      <text>{{item.price}}</text>
-      <text>{{item.time}}</text>
+<view>
+  <loading hidden="{{!loading}}">
+    加载中...
+  </loading>
+  
+  <scroll-view scroll-y="true" class="page-body">
+    <view class="item" wx:for="{{coupons}}">
+      <view wx:for="{{item.lists}}">
+        <image src="{{item.img}}"></image>
+        <text>{{item.name}}</text>
+        <text>{{item.price}}</text>
+        <text>{{item.time}}</text>
+      </view>
     </view>
-  </view>
-</scroll-view>
+  </scroll-view>
+</view>

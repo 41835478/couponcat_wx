@@ -3,6 +3,7 @@
 var app = getApp()
 Page({
   data: {
+      loading: true,
       coupons: []
   },
   onLoad: function (params) {
@@ -10,7 +11,7 @@ Page({
       companyId = params.company || 'mcdonalds'
       company = require('../../utils/'+companyId+'.js')
       company.getData((data)=>{
-          that.setData({coupons:data})
+          that.setData({coupons:data, loading: false})
       })
   }
 })

@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <navigator url="../coupons/coupons?company=mcdonalds">
+  <text>麦当劳</text>
+  </navigator>
+  <navigator url="../coupons/coupons?company=kfc">
+  <text>肯德基</text>
+  </navigator>
+</view>

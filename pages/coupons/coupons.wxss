@@ -1,15 +1,35 @@
 .item {
-  display: fles;
-  padding: 20rpx 40rpx;
+  display: flex;
+  padding: 20rpx 20rpx;
   border-bottom: 1rpx solid #eee;
 }
 
 .item .poster {
-  width: 128rpx;
-  height: 128rpx;
+  width: 180rpx;
+  height: 180rpx;
   margin-right: 20rpx;
 }
 
 .item .meta {
   flex: 1;
+}
+
+.item .meta .title,
+.item .meta .price {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}
+
+.item .meta .title {
+	font-size: 30rpx;
+}
+
+.item .meta .price {
+  font-size: 34rpx;
+  color: red;
+}
+
+.item .meta .time {
+	font-size: 25rpx;
 }

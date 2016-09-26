@@ -11,20 +11,11 @@ function getData(callback){
             method: 'GET',
             success: function(data){
                 data = data.replace(/\s*var cardData =\s*/,'')
-                coupons = formatData(JSON.parse(data))
+                coupons = JSON.parse(data)
                 callback && callback(coupons)
             }
         })
     }
-}
-
-function formatData(data){
-    for(index1 in data){
-        for(index2 in data[index1].lists){
-            data[index1].lists[index2]['title'] = data[index1].lists[index2]['name']
-        }
-    }
-    return data
 }
 
 module.exports = {

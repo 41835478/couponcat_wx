@@ -6,4 +6,8 @@
   <navigator url="../coupons/coupons?company=kfc">
   <text>肯德基</text>
   </navigator>
+  <navigator url="../coupons/coupons?company=bugerking">
+  <text>汉堡王</text>
+  </navigator>
+  <image src="http://7xlniu.com1.z0.glb.clouddn.com/website/discount/discountKV83.jpg"></image>
 </view>

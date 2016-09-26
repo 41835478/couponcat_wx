@@ -10,7 +10,6 @@ Page({
       companyId = params.company || 'mcdonalds'
       company = require('../../utils/'+companyId+'.js')
       company.getData((data)=>{
-          console.log(data)
           that.setData({coupons:data})
       })
   }

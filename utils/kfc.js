@@ -1,19 +1,25 @@
 const app = getApp()
-let host = 'http://youhui.kfc.com.cn/mobile/handler/GetList.ashx'
+let host = 'http://youhui.kfc.com.cn'
 let op = 'LFF'
+let coupons = null
 
 function getData(callback){
-    app.request({
-        url: host,
-        method: 'POST',
-        data: {"op": "LFF"},
-        header: {
-            'content-type':'application/x-www-form-urlencoded'
-        },
-        success: function(data){
-            callback && callback(formatData(data))
-        }
-    })
+    if(coupons){
+        callback && callback(coupons)
+    }else{
+        app.request({
+            url: host+'/mobile/handler/GetList.ashx',
+            method: 'POST',
+            data: {"op": "LFF"},
+            header: {
+                'content-type':'application/x-www-form-urlencoded'
+            },
+            success: function(data){
+                coupons = formatData(data)
+                callback && callback(coupons)
+            }
+        })
+    }
 }
 
 function formatData(data){

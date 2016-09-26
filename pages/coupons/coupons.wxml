@@ -8,7 +8,7 @@
     <view class="item" wx:for="{{coupons}}">
       <view wx:for="{{item.lists}}">
         <image src="{{item.img}}"></image>
-        <text>{{item.name}}</text>
+        <text>{{item.title}}</text>
         <text>{{item.price}}</text>
         <text>{{item.time}}</text>
       </view>

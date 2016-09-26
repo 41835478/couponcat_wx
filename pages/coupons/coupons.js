@@ -3,6 +3,7 @@
 var app = getApp()
 Page({
   data: {
+      companyName: '',
       loading: true,
       coupons: []
   },
@@ -10,8 +11,16 @@ Page({
       that = this
       companyId = params.company || 'mcdonalds'
       company = require('../../utils/'+companyId+'.js')
+      this.setData({companyName:company.companyName})
       company.getData((data)=>{
+          console.log(data)
           that.setData({coupons:data, loading: false})
       })
+      
+      
+  },
+  
+  onReady(){
+      wx.setNavigationBarTitle({title:this.data.companyName})
   }
 })

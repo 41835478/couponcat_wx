@@ -28,7 +28,7 @@ function formatData(data){
         list.push({
             'id': data.data[index].CouponID,
             'img': host+data.data[index].SmallPic,
-            'name': data.data[index].CouponTitle,
+            'title': data.data[index].CouponTitle,
             'price': data.data[index].CouponPrice,
             'time': data.data[index].CouponValidity,
             'img_big': host+data.data[index].BigPic

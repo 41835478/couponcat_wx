@@ -13,7 +13,6 @@ Page({
       company = require('../../utils/'+companyId+'.js')
       this.setData({companyName:company.companyName})
       company.getData((data)=>{
-          console.log(data)
           that.setData({coupons:data, loading: false})
       })
       

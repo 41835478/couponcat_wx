@@ -1,5 +1,15 @@
-.item{
+.item {
   display: fles;
   padding: 20rpx 40rpx;
   border-bottom: 1rpx solid #eee;
+}
+
+.item .poster {
+  width: 128rpx;
+  height: 128rpx;
+  margin-right: 20rpx;
+}
+
+.item .meta {
+  flex: 1;
 }

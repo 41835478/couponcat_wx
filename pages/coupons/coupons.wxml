@@ -7,10 +7,12 @@
   <scroll-view scroll-y="true" class="page-body">
     <view class="item" wx:for="{{coupons}}">
       <view wx:for="{{item.lists}}">
-        <image src="{{item.img}}"></image>
-        <text>{{item.title}}</text>
-        <text>{{item.price}}</text>
-        <text>{{item.time}}</text>
+        <image class="poster" src="{{item.img}}"></image>
+        <view class="meta">
+          <text>{{item.title}}</text>
+          <text>{{item.price}}</text>
+          <text>{{item.time}}</text>
+        </view>
       </view>
     </view>
   </scroll-view>

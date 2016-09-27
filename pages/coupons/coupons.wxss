@@ -31,5 +31,6 @@
 }
 
 .item .meta .time {
-	font-size: 25rpx;
+  font-size: 20rpx;
+  color: grey;
 }

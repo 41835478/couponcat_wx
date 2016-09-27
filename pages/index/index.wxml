@@ -1,13 +1,12 @@
 <!--index.wxml-->
 <view class="container">
   <navigator url="../coupons/coupons?company=mcdonalds">
-  <text>麦当劳</text>
+  <image mode="aspectFit" class="logo" src="../../images/mcdonalds.png"></image>
   </navigator>
   <navigator url="../coupons/coupons?company=kfc">
-  <text>肯德基</text>
+  <image class="logo" src="../../images/kfc.png"></image>
   </navigator>
   <navigator url="../coupons/coupons?company=bugerking">
-  <text>汉堡王</text>
+  <image class="logo" src="../../images/bugerking.png"></image>
   </navigator>
-  <image src="http://7xlniu.com1.z0.glb.clouddn.com/website/discount/discountKV83.jpg"></image>
 </view>

@@ -10,6 +10,11 @@
   margin-right: 20rpx;
 }
 
+.item .poster-bk {
+  width: 100%;
+  height: 500rpx;
+}
+
 .item .meta {
   flex: 1;
 }

@@ -4,10 +4,10 @@
     加载中...
   </loading>
   
-  <scroll-view scroll-y="true" class="page-body">
+  <scroll-view scroll-y="true">
     <view wx:for="{{coupons}}" wx:for-item="group">
       <view class="item" wx:for="{{group.lists}}">
-        <image class="poster" mode="aspectFit" src="{{item.img}}"></image>
+        <image class="{{item.price ? 'poster' : 'poster-bk'}}" mode="aspectFit" src="{{item.img}}"></image>
         <view class="meta" wx:if="{{item.price}}">
           <text class="title">{{item.name}}</text>
           <text class="price">{{item.price}}</text>

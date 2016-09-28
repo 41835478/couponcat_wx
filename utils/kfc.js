@@ -1,25 +1,28 @@
 const app = getApp()
 let host = 'http://youhui.kfc.com.cn'
 let op = 'LFF'
-let coupons = null
+let coupons = wx.getStorageSync('kfc')
 
 function getData(callback){
     if(coupons){
         callback && callback(coupons)
-    }else{
-        app.request({
-            url: host+'/mobile/handler/GetList.ashx',
-            method: 'POST',
-            data: {"op": "LFF"},
-            header: {
-                'content-type':'application/x-www-form-urlencoded'
-            },
-            success: function(data){
-                coupons = formatData(data)
-                callback && callback(coupons)
-            }
-        })
     }
+    app.request({
+        url: host+'/mobile/handler/GetList.ashx',
+        method: 'POST',
+        data: {"op": "LFF"},
+        header: {
+            'content-type':'application/x-www-form-urlencoded'
+        },
+        success: function(data){
+            coupons = formatData(data)
+            wx.setStorage({
+                key: "kfc",
+                data: coupons
+            })
+            callback && callback(coupons)
+        }
+    })
 }
 
 function formatData(data){

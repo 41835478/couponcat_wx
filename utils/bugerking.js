@@ -1,20 +1,24 @@
 const app = getApp()
 let host = 'http://www.bkchina.cn'
-let coupons = null
+let coupons = wx.getStorageSync('bugerking')
 
 function getData(callback){
   if(coupons){
     callback && callback(coupons)
-  }else{
-    app.request({
-      url: host+'/discount/discountList',
-      method: 'GET',
-      success: function(data){
-        coupons = formatData(data)
-        callback && callback(coupons)
-      }
-    })
   }
+  app.request({
+    url: host+'/discount/discountList',
+    method: 'GET',
+    success: function(data){
+      coupons = formatData(data)
+      wx.setStorage({
+          key: "bugerking",
+          data: coupons
+      })
+      callback && callback(coupons)
+    }
+  })
+  
 }
 
 function formatData(data){
